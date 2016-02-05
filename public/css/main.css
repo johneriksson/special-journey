@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700);
+body, html {
+  min-height: 100%; }
+
+body {
+  background: linear-gradient(-20deg, #fe8874, #fe6868);
+  font: 500 1.2em "Roboto", sans-serif;
+  color: #435757;
+  padding: 20px; }
+
+h1 {
+  text-align: center; }
+
+.chat-window {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  padding: 10px;
+  padding-right: 18px; }
+  .chat-window textarea {
+    resize: none;
+    width: 100%;
+    background: none;
+    border: 2px solid #435757; }
+
+.input-window {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex; }
+  .input-window input[type="text"] {
+    border: 2px solid #435757;
+    background: none;
+    flex-grow: 10; }
+  .input-window button {
+    border: 2px solid #435757;
+    background: none;
+    width: 20%;
+    min-width: 50px;
+    margin-left: 10px; }
+
+/*# sourceMappingURL=main.css.map */
