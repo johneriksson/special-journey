@@ -1,0 +1,17 @@
+{
+  "name": "special-journey",
+  "homepage": "https://github.com/johneriksson/special-journey",
+  "authors": [
+    "John Eriksson <johne3@kth.se>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}
