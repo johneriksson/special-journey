@@ -3,6 +3,7 @@ var wss = new WebSocketServer({ port: 60001 });
 
 function broadcast(message) {
     wss.clients.forEach(function(client) {
+        console.log("client.send");
         client.send(message);
     });
 }
