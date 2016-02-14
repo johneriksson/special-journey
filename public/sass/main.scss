@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,700);
 
-$border-color: #435757;
+$border-color: rgba(255,255,255,.4);
 $main-font-color: #435757;
 $main-font: 500 1.2em 'Roboto', sans-serif;
 $bright-bg: rgba(255, 255, 255, .2);
@@ -24,13 +24,20 @@ h1 {
     background: $bright-bg;
     margin: 0 auto;
     padding: 10px;
-    padding-right: 18px;
+    min-height: 400px;
+    height: 100%;
+    display: flex;
     
-    textarea {
-        resize: none;
+    .textarea {
         width: 100%;
         background: none;
         border: 2px solid $border-color;
+        
+        p {
+            animation: message-appear .5s;
+            
+            margin-left: 10px;
+        }
     }
 }
 
@@ -45,13 +52,39 @@ h1 {
         border: 2px solid $border-color;
         background: none;
         flex-grow: 10;
+        font: $main-font;
+        color: $main-font-color;
     }
     
     button {
-        border: 2px solid $border-color;
-        background: none;
         width: 20%;
         min-width: 50px;
         margin-left: 10px;
+        color: $main-font-color;
+        cursor: pointer;
+        padding: 5px;
+        background: rgba(255,255,255,.4);
+        border: none;
+        font: 500 1.2em 'Roboto', sans-serif;
+        
+        -webkit-transition: 0.2s linear;
+        transition: 0.2s linear;
+        -webkit-clip-path: circle(70.7% at 50% 50%);
+        clip-path: circle(70.7% at 50% 50%);
+    }
+    
+    button:hover {
+        -webkit-clip-path: circle(49.3% at 50% 50%);
+        clip-path: circle(49.3% at 50% 50%);
+    }
+}
+
+@keyframes message-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
     }
 }

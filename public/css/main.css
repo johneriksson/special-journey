@@ -15,12 +15,16 @@ h1 {
   background: rgba(255, 255, 255, 0.2);
   margin: 0 auto;
   padding: 10px;
-  padding-right: 18px; }
-  .chat-window textarea {
-    resize: none;
+  min-height: 400px;
+  height: 100%;
+  display: flex; }
+  .chat-window .textarea {
     width: 100%;
     background: none;
-    border: 2px solid #435757; }
+    border: 2px solid rgba(255, 255, 255, 0.4); }
+    .chat-window .textarea p {
+      animation: message-appear .5s;
+      margin-left: 10px; }
 
 .input-window {
   background: rgba(255, 255, 255, 0.2);
@@ -29,14 +33,34 @@ h1 {
   padding: 10px;
   display: flex; }
   .input-window input[type="text"] {
-    border: 2px solid #435757;
+    border: 2px solid rgba(255, 255, 255, 0.4);
     background: none;
-    flex-grow: 10; }
+    flex-grow: 10;
+    font: 500 1.2em "Roboto", sans-serif;
+    color: #435757; }
   .input-window button {
-    border: 2px solid #435757;
-    background: none;
     width: 20%;
     min-width: 50px;
-    margin-left: 10px; }
+    margin-left: 10px;
+    color: #435757;
+    cursor: pointer;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    font: 500 1.2em 'Roboto', sans-serif;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+    -webkit-clip-path: circle(70.7% at 50% 50%);
+    clip-path: circle(70.7% at 50% 50%); }
+  .input-window button:hover {
+    -webkit-clip-path: circle(49.3% at 50% 50%);
+    clip-path: circle(49.3% at 50% 50%); }
+
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  50% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
